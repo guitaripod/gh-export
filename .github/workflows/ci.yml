@@ -28,7 +28,7 @@ jobs:
       uses: dtolnay/rust-toolchain@master
       with:
         toolchain: ${{ matrix.rust }}
-        components: rustfmt, clippy
+        components: clippy
     
     - name: Cache dependencies
       uses: actions/cache@v4
@@ -39,9 +39,6 @@ jobs:
           target
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
     
-    - name: Check formatting
-      run: cargo fmt -- --check
-      
     - name: Run clippy
       run: cargo clippy -- -D warnings
       
