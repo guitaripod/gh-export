@@ -222,7 +222,7 @@ pub async fn check_disk_space(path: &Path, required_bytes: u64) -> Result<()> {
         let stat = nix::sys::statvfs::statvfs(path)
             .map_err(|e| GhExportError::Io(std::io::Error::other(e)))?;
 
-        let available = stat.blocks_available() * stat.block_size();
+        let available = stat.blocks_available() as u64 * stat.block_size();
 
         if available < required_bytes {
             return Err(GhExportError::InsufficientSpace {
