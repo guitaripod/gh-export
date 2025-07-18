@@ -1,5 +1,10 @@
 # gh-export
 
+[![Crates.io](https://img.shields.io/crates/v/gh-export.svg)](https://crates.io/crates/gh-export)
+[![CI](https://github.com/guitaripod/gh-export/workflows/CI/badge.svg)](https://github.com/guitaripod/gh-export/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Downloads](https://img.shields.io/crates/d/gh-export.svg)](https://crates.io/crates/gh-export)
+
 A fast and reliable GitHub repository exporter written in Rust. Export all repositories from a GitHub user account with a single command.
 
 ## Features
