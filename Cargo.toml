@@ -37,4 +37,3 @@ nix = { version = "0.29", features = ["fs"] }
 
 [dev-dependencies]
 mockito = "1.5"
-tempdir = "0.3"
