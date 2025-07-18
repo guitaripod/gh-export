@@ -216,17 +216,17 @@ impl Downloader {
     }
 }
 
-pub async fn check_disk_space(path: &Path, required_bytes: u64) -> Result<()> {
+pub async fn check_disk_space(_path: &Path, _required_bytes: u64) -> Result<()> {
     #[cfg(unix)]
     {
-        let stat = nix::sys::statvfs::statvfs(path)
+        let stat = nix::sys::statvfs::statvfs(_path)
             .map_err(|e| GhExportError::Io(std::io::Error::other(e)))?;
 
         let available = stat.blocks_available() as u64 * stat.block_size();
 
-        if available < required_bytes {
+        if available < _required_bytes {
             return Err(GhExportError::InsufficientSpace {
-                needed: required_bytes,
+                needed: _required_bytes,
                 available,
             });
         }
