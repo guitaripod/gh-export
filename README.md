@@ -5,6 +5,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://img.shields.io/crates/d/gh-export.svg)](https://crates.io/crates/gh-export)
 
+[![Linux](https://img.shields.io/badge/Platform-Linux-green.svg)](https://github.com/guitaripod/gh-export/releases)
+[![macOS](https://img.shields.io/badge/Platform-macOS-green.svg)](https://github.com/guitaripod/gh-export/releases)
+[![Windows](https://img.shields.io/badge/Platform-Windows-green.svg)](https://github.com/guitaripod/gh-export/releases)
+
 A fast and reliable GitHub repository exporter written in Rust. Export all repositories from a GitHub user account with a single command.
 
 ## Features
